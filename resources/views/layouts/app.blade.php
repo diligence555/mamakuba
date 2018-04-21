@@ -18,8 +18,11 @@
     <div id="app" class="{{ route_class() }}-page">
 
         @include('layouts._header')
-
+        @if(session('success'))
+            {{ session('success') }}
+        @endif
         <div class="container">
+            @include('layouts._message')
 
             @yield('content')
 

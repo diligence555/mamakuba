@@ -72,6 +72,5 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
         session()->flash('success', '欢迎，您将在这里开启一段新的旅程~');
-
     }
 }

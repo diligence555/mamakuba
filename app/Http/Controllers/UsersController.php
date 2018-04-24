@@ -9,6 +9,11 @@ use App\Handlers\ImageUploadHandler;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['show']]);
+    }
+
     //显示个人中心的页面
     public function show(User $user)
     {
@@ -20,12 +25,14 @@ class UsersController extends Controller
     //点击编辑选项跳转到具体的编辑页面
     public function edit(User $user)
     {
+        $this->authorize('update', $user);
         return view('users.edit', compact('user'));
     }
 
     //在编辑页面点击  保存修改 完成具体的功能
     public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
     {
+        $this->authorize('update', $user);
         $data = $request->all();
         if($request->avatar){
             $result = $uploader->save($request->avatar, 'avatars', $user->id, 362);

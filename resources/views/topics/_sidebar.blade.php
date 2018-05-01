@@ -6,8 +6,9 @@
     </div>
 
     <div class="panel-body">
-    {{--<li class="active">右边导航栏</li>--}}
-    右边导航栏
+        <a href="{{ route('topics.create') }}" class="btn btn-success btn-block" aria-label="Left Align">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 新建帖子
+        </a>
     </div>
 
 </div>

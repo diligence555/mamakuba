@@ -10,4 +10,11 @@ class PagesController extends Controller
     {
         return view('pages.root');
     }
+
+    public function about()
+    {
+
+        return view('pages.about');
+    
+    }
 }

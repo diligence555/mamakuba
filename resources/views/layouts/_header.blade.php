@@ -12,6 +12,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
+            <!--<a class="navbar-brand" href="{{ route('root') }}">-->
                 <!--LaraBBS--> 
                 Mamakuba
             </a>
@@ -34,7 +35,7 @@
 			 </a>
               <ul class="dropdown-menu">
                <li><a href="#">给妈妈的一份信</a></li>
-               <li><a href="#">关于本站</a></li>
+               <li><a href="{{route('about')}}">关于本站</a></li>
                <li><a href="#">意见与建议</a></li>
               </ul>
              </li>
@@ -46,14 +47,15 @@
 					<b class="caret"></b>
 			 </a>
               <ul class="dropdown-menu">
-               <li class="active"><a href="{{ route('topics.index') }}">话题</a></li>
-                <li><a href="{{ route('categories.show', 1) }}">分享</a></li>
-                <li><a href="{{ route('categories.show', 2) }}">教程</a></li>
-                <li><a href="{{ route('categories.show', 3) }}">问答</a></li>
-                <li><a href="{{ route('categories.show', 4) }}">公告</a></li>
+                <li class="{{ active_class(if_route('topics.index')) }}"><a href="{{ route('topics.index') }}">话题</a></li>
+                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}"><a href="{{ route('categories.show', 1) }}">分享</a></li>
+                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}"><a href="{{ route('categories.show', 2) }}">教程</a></li>
+                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}"><a href="{{ route('categories.show', 3) }}">问答</a></li>
+                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}"><a href="{{ route('categories.show', 4) }}">公告</a></li>
+            
               </ul>
              </li>
-             <li><a href="#">社区指导与讨论</a></li>
+             
              <li><a href="#">教育与宣传</a></li>
 
             </ul>-->

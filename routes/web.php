@@ -10,8 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//路由的作用是将对应功能对服务器的请求，经行先一步转移到对应的控制器中。
+//ex:在路由末端中写上->name('help');可以在对应的链接中使用root{{'help'}},就可以完成跳转。
 
 Route::get('/','PagesController@root')->name('root');
+//测试实际项目中的相关页面
+Route::get('/about','PagesController@about')->name('about');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -35,3 +39,6 @@ Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'crea
 
 //根据分类列表话题
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+
+//上传图片
+Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');

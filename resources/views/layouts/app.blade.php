@@ -18,11 +18,12 @@
 
 <body>
     <div id="app" class="{{ route_class() }}-page">
-
+        <!--自主添加的内容-->
         @include('layouts._header')
-        @if(session('success'))
+        <!--@if(session('success'))
             {{ session('success') }}
-        @endif
+        @endif-->
+        {{ session('success') }}
         <div class="container">
             @include('layouts._message')
 

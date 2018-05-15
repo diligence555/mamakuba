@@ -28,7 +28,7 @@
                 <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}"><a href="{{ route('categories.show', 3) }}">问答</a></li>
                 <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}"><a href="{{ route('categories.show', 4) }}">公告</a></li>
             </ul>
-            <!--<ul class="nav navbar-nav">
+            <!-- <ul class="nav navbar-nav">
              <li class="dropdown">
              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					致妈妈
@@ -59,7 +59,7 @@
              
              <li><a href="#">教育与宣传</a></li>
 
-            </ul>-->
+            </ul> -->
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
@@ -90,6 +90,16 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+
+                            @can('manage_contents')
+                                <li>
+                                    <a href="{{ url(config('administrator.uri')) }}">
+                                        <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+                                        管理后台
+                                    </a>
+                                </li>
+                            @endcan
+                            
                             <li>
                                 <a href="{{ route('users.show', Auth::id()) }}">
                                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>

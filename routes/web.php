@@ -48,3 +48,6 @@ Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]
 
 //将消息通知显示出来
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
+
+//提示普通用户无权访问后台
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');

@@ -12,6 +12,9 @@
                 <div class="media-body">
 
                     <div class="media-heading">
+                        @if($topic->is_top)
+                            <span class="label label-danger">置顶</span>
+                        @endif
                         <a href="{{ $topic->link() }}" title="{{ $topic->title }}">
                             {{ $topic->title }}
                         </a>

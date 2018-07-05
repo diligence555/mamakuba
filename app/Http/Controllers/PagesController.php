@@ -15,6 +15,23 @@ class PagesController extends Controller
     {
 
         return view('pages.about');
+        // return view('pages.bbb');
+    
+    }
+
+    public function letter()
+    {
+
+        return view('pages.letter');
+        // return view('pages.bbb');
+    
+    }
+
+    public function suggestion()
+    {
+
+         return view('pages.tell-us');
+        
     
     }
 

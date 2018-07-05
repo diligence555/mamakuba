@@ -20,6 +20,8 @@ class CreateTopicsTable extends Migration
             $table->text('excerpt');
             $table->string('slug')->nullable();
             $table->timestamps();
+            //新增字段用于顶置功能
+            $table->boolean('is_top')->default(0);
         });
 	}
 

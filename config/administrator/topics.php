@@ -38,6 +38,11 @@ return [
         'reply_count' => [
             'title'    => '评论',
         ],
+        
+        'is_top' =>[
+
+            'title'    =>'是否置顶',
+        ],
         'operation' => [
             'title'  => '管理',
             'sortable' => false,
@@ -46,6 +51,10 @@ return [
     'edit_fields' => [
         'title' => [
             'title'    => '标题',
+        ],
+        'is_top' => [
+            'title'     => '是否置顶',
+            'type' => 'bool'
         ],
         'user' => [
             'title'              => '用户',

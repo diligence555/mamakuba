@@ -16,6 +16,8 @@
 Route::get('/','PagesController@root')->name('root');
 //测试实际项目中的相关页面
 Route::get('/about','PagesController@about')->name('about');
+Route::get('/letter','PagesController@letter')->name('letter');
+Route::get('/suggestion','PagesController@suggestion')->name('suggestion');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

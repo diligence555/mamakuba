@@ -6,6 +6,7 @@ use App\Models\Topic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
+use App\Handlers\ImageUploadHandler;
 use App\Models\Category;
 use Auth;
 use App\Models\User;
@@ -46,7 +47,7 @@ class TopicsController extends Controller
 	public function store(TopicRequest $request, Topic $topic)
 	{
 		$topic->fill($request->all());
-        $topic->user_id = Auth::id();
+		$topic->user_id = Auth::id();
         $topic->save();
 		return redirect()->to($topic->link())->with('success', '成功创建话题！');
 	}
@@ -75,6 +76,8 @@ class TopicsController extends Controller
 		return redirect()->route('topics.index')->with('success', '删除成功！');
 	}
 
+
+	//上传图片
 	public function uploadImage(Request $request, ImageUploadHandler $uploader)
     {
         // 初始化返回数据，默认是失败的

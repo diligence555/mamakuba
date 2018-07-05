@@ -16,16 +16,21 @@ class Topic extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function scopeIsTop($query)
+    {
+        return $query->orderByDesc('is_top');
+    }
+
     public function scopeWithOrder($query, $order)
     {
         // 不同的排序，使用不同的数据读取逻辑
         switch ($order) {
             case 'recent':
-                $query->recent();
+                $query->isTop()->recent();
                 break;
 
             default:
-                $query->recentReplied();
+                $query->isTop()->recentReplied();
                 break;
         }
         // 预加载防止 N+1 问题

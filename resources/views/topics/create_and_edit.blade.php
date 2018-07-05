@@ -39,6 +39,7 @@
                             @foreach ($categories as $value)
                                 <option value="{{ $value->id }}" {{ $topic->category_id == $value->id ? 'selected' : '' }}>{{ $value->name }}</option>
                             @endforeach
+                            
                         </select>
                     </div>
 

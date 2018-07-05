@@ -21,45 +21,25 @@
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
-             <ul class="nav navbar-nav">
-            <li class="{{ active_class(if_route('topics.index')) }}"><a href="{{ route('topics.index') }}">话题</a></li>
-                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}"><a href="{{ route('categories.show', 1) }}">分享</a></li>
-                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}"><a href="{{ route('categories.show', 2) }}">教程</a></li>
-                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}"><a href="{{ route('categories.show', 3) }}">问答</a></li>
-                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}"><a href="{{ route('categories.show', 4) }}">公告</a></li>
-            </ul> 
-             <!-- <ul class="nav navbar-nav">
-             <li class="dropdown">
+            <ul class="nav navbar-nav">
+            <li class="dropdown">
              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					致妈妈
 					<b class="caret"></b>
 			 </a>
               <ul class="dropdown-menu">
-               <li><a href="#">给妈妈的一份信</a></li>
+               <li><a href="{{route('letter')}}">给妈妈的一份信</a></li>
                <li><a href="{{route('about')}}">关于本站</a></li>
-               <li><a href="#">意见与建议</a></li>
+               <li><a href="{{route('suggestion')}}">意见与建议</a></li>
               </ul>
-             </li>
-
-             <li><a href="#">我的故事</a></li>
-             <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					社区指导与讨论
-					<b class="caret"></b>
-			 </a>
-              <ul class="dropdown-menu">
-                <li class="{{ active_class(if_route('topics.index')) }}"><a href="{{ route('topics.index') }}">话题</a></li>
-                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}"><a href="{{ route('categories.show', 1) }}">分享</a></li>
-                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}"><a href="{{ route('categories.show', 2) }}">教程</a></li>
-                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}"><a href="{{ route('categories.show', 3) }}">问答</a></li>
-                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}"><a href="{{ route('categories.show', 4) }}">公告</a></li>
-            
-              </ul>
-             </li>
-             
-             <li><a href="#">教育与宣传</a></li>
-
-            </ul>  -->
+            </li>
+            <li class="{{ active_class(if_route('topics.index')) }}"><a href="{{ route('topics.index') }}">社区与话题</a></li>
+                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}"><a href="{{ route('categories.show', 1) }}">我小小的故事</a></li>
+                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}"><a href="{{ route('categories.show', 2) }}">分享我的一点点</a></li>
+                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}"><a href="{{ route('categories.show', 3) }}">心理指导与交流</a></li>
+                <li class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}"><a href="{{ route('categories.show', 4) }}">再怀孕指导与分享</a></li>
+            </ul>  
+        
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">

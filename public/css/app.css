@@ -16,6 +16,8 @@ html {
 
 body {
   margin: 0;
+  background-position:center;
+  background-image: url('../images/background-image/bg-03.gif');
 }
 
 article,

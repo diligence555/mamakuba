@@ -3,7 +3,9 @@
 <footer class="footer">
     <div class="container">
                         
-        <p class="pull-left"><a href="mailto:{{ setting('contact_email') }}">联系我们</a></p>
+       
+        <!-- <p class="pull-left"><a href=mailto:1565011735@qq.com>联系我们</a></p> -->
+        <p class="pull-left"><a href="{{route('suggestion')}}">联系我们</a></p>
 
     
         <p class="pull-right">

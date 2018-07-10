@@ -26,7 +26,7 @@
 @stop
 
 @section('content')
-<body class="content">
+
 
     <div class="center">
         
@@ -35,10 +35,9 @@
         
         </div>
         <div >
-            <p style="text-align: center;"><span style="font-size: 16px;">总机：(+86 10)5992 8888</span></p>
-            <p style="text-align: center;"><span style="font-size: 16px;">TEL：(+86 10)5992 8888</span></p>
-            <p style="text-align: center;"><span style="font-size: 16px;">邮箱：1565011735@qq.com</span></p>
-            <p style="text-align: center;"><span style="font-size: 16px;">地址：浙江省温州市茶山高教园区中心北路</span></p>
+            <p style="text-align: center;"><span style="font-size: 16px;">联系站长：(+86 10)188 5773 0517</span></p>            
+            <p style="text-align: center;"><span style="font-size: 16px;">邮箱地址：1565011735@qq.com</span></p>
+            <p style="text-align: center;"><span style="font-size: 16px;">地址：浙江省温州市茶山高教园区中心北路温州医科大学</span></p>
 
 
                
@@ -54,9 +53,5 @@
        
     
     </div>
-    
-
-    </body> 
-
 
 @stop

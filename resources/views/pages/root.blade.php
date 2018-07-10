@@ -1,23 +1,17 @@
 <!DOCTYPE HTML>
-<!--
-	Parallelism by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>MaMaKuBa</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+		<meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/for-root/app-for-head.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('css/for-root/main.css') }}">
-        <noscript><link rel="stylesheet" href="{{ URL::asset('css/for-root/noscript.css') }}" /></noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="{{ URL::asset('css/for-root/noscript.css') }}" /></noscript>
+		
 	</head>
 	<body>
-        <div> 
+        <div id="app"> 
          @include('layouts._header') 
         
         </div>
@@ -55,7 +49,7 @@
 						</article>
 
 						<article class="item thumb" data-width="320">
-							<h2>丧失宝宝后生理和心理都需要一段时间</h2>
+							<h2>丧失宝宝后需要时间来恢复</h2>
 							<a href="{{ asset('images/for-root/fulls/04.png') }}" class="image"><img src="{{ asset('images/for-root/thumbs/04.png') }}" alt=""></a>
 						</article>
 
@@ -113,21 +107,15 @@
 		</div>
 
 		<!-- Scripts -->
-			<!-- <script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/skel-viewport.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script> -->
 
+			<script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script> 
             <script type="text/javascript" src="{{ URL::asset('js/for-root/jquery.min.js') }}"></script>
             <script type="text/javascript" src="{{ URL::asset('js/for-root/jquery.poptrox.min.js') }}"></script>
             <script type="text/javascript" src="{{ URL::asset('js/for-root/skel.min.js') }}"></script>
             <script type="text/javascript" src="{{ URL::asset('js/for-root/skel-viewport.min.js') }}"></script>
             <script type="text/javascript" src="{{ URL::asset('js/for-root/util.js') }}"></script>
             <script type="text/javascript" src="{{ URL::asset('js/for-root/main.js') }}"></script>
-            <script src="{{ asset('js/app.js') }}"></script> 
-
+            
 
 	</body>
 </html>

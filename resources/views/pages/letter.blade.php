@@ -23,9 +23,9 @@
 @stop
 
 @section('content')
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
 <div >
-<table border="0" align="center" cellpadding="0" cellspacing="0" class="Table_01">
+<table border="0" align="center" cellpadding="0" cellspacing="0" >
 	
 	<tr>
 		<td>
@@ -51,5 +51,5 @@
     </p>
 </div>
 
-</body>
+
 @stop
